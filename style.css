@@ -1,0 +1,19 @@
+:root {
+    --colA: #03213A; --colB: #20486D; --colC: #3D6F9F;
+    --colD: #7193BA; --colE: #D9DBF1; --colF: #D68C45;
+    --colG: #28502E; --colWhite: #f8f8f8;
+}
+body { background-color: var(--colWhite); color: var(--colA); font-family: sans-serif; }
+.sidebar { background-color: var(--colA); color: var(--colE); }
+.sidebar button:hover { background-color: var(--colB); }
+.sidebar button.active { background-color: var(--colF); color: white; }
+canvas { cursor: default; background: white; border-radius: 8px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.animate-pop {
+    animation: popIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
